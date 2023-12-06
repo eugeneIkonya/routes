@@ -13,7 +13,9 @@ class Screen2 extends StatelessWidget {
       body: Container(
         alignment: Alignment.center,
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           style: const ButtonStyle(
               backgroundColor: MaterialStatePropertyAll(Colors.amber)),
           child: const Text('Go To screen 1'),

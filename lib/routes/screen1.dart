@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:routes/routes/screen2.dart';
 
 class Screen1 extends StatelessWidget {
   const Screen1({super.key});
@@ -13,7 +14,11 @@ class Screen1 extends StatelessWidget {
       body: Container(
         alignment: Alignment.center,
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return const Screen2();
+            }));
+          },
           style: const ButtonStyle(
               backgroundColor: MaterialStatePropertyAll(Colors.teal)),
           child: const Text('Go To screen 2'),
